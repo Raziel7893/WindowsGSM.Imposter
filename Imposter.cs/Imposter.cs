@@ -68,7 +68,14 @@ namespace WindowsGSM.Plugins
             config.HttpServer.ListenPort = _serverData.ServerQueryPort;
             config.HttpServer.ListenIp = _serverData.ServerIP;
 
-            File.WriteAllText(configFile, JsonConvert.SerializeObject(config, Formatting.Indented));
+            if (config.Timeout == null)
+                config.Timeout = new Timeout();
+            if (config.Compatibility == null)
+                config.Compatibility = new Compatibility();
+            if (config.Debug == null)
+                config.Debug = new Debug();
+
+        File.WriteAllText(configFile, JsonConvert.SerializeObject(config, Formatting.Indented));
         }
 
 
