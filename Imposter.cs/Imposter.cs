@@ -280,6 +280,21 @@ namespace WindowsGSM.Plugins
             public bool Enabled = true;
             public bool BanIpFromGame = true;
         }
+        public class Timeout
+        {
+            public int SpawnTimeout = 2500;
+            public int ConnectionTimeout = 2500;
+        }
+        public class Compatibility
+        {
+            public bool AllowFutureGameVersions = false;
+            public bool AllowVersionMixing = false;
+        }
+        public class Debug
+        {
+            public bool GameRecorderEnabled = false;
+            public string GameRecorderPath = "";
+        }
         public class ImposterConfig
         {
             public ImposterServer Server;
