@@ -91,7 +91,7 @@ namespace WindowsGSM.Plugins
             };
 
             // Set up Redirect Input and Output to WindowsGSM Console if EmbedConsole is on
-            if (AllowsEmbedConsole)
+            if (_serverData.EmbedConsole)
             {
                 p.StartInfo.CreateNoWindow = false;
                 p.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
@@ -101,34 +101,23 @@ namespace WindowsGSM.Plugins
                 var serverConsole = new ServerConsole(_serverData.ServerID);
                 p.OutputDataReceived += serverConsole.AddOutput;
                 p.ErrorDataReceived += serverConsole.AddOutput;
-
-                // Start Process
-                try
-                {
-                    p.Start();
-                }
-                catch (Exception e)
-                {
-                    Error = e.Message;
-                    return null; // return null if fail to start
-                }
-
-                p.BeginOutputReadLine();
-                p.BeginErrorReadLine();
-                return p;
             }
-
             // Start Process
             try
             {
                 p.Start();
-                return p;
             }
             catch (Exception e)
             {
                 Error = e.Message;
                 return null; // return null if fail to start
             }
+            if (_serverData.EmbedConsole)
+            {
+                p.BeginOutputReadLine();
+                p.BeginErrorReadLine();
+            }
+            return p;
         }
 
 
@@ -271,7 +260,7 @@ namespace WindowsGSM.Plugins
                 return null;
             }
         }
-		
+
 
         public class ImposterServer
         {

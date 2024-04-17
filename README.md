@@ -4,6 +4,7 @@
 ## PLEASE ⭐STAR⭐ THE REPO IF YOU LIKE IT! THANKS!
 
 ### Comments
+-
 - Mobile clients will not work on default, you will need to set up an https reverse proxy
   - See https://github.com/Impostor/Impostor/blob/master/docs/Http-server.md for instructions
 - To Setup clients to use your server: https://impostor.github.io/Impostor/
