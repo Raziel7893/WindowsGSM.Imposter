@@ -3,6 +3,11 @@
 
 ## PLEASE ⭐STAR⭐ THE REPO IF YOU LIKE IT! THANKS!
 
+### Comments
+- Mobile clients will not work on default, you will need to set up an https reverse proxy
+  - See https://github.com/Impostor/Impostor/blob/master/docs/Http-server.md for instructions
+- To Setup clients to use your server: https://impostor.github.io/Impostor/
+
 ### WindowsGSM Installation: 
 1. Download  WindowsGSM https://windowsgsm.com/ 
 2. Create a Folder at a Location you wan't all Server to be Installed and Run.
@@ -15,7 +20,7 @@
 3. Or Press on the Puzzle Icon in the left bottom side and press **[IMPORT PLUGIN]** and choose the downloaded .zip
 
 ### Official Documentation
-🗃️ Didn't find any documentation yet. Please Let me know if you came accros one
+🗃️ https://github.com/Impostor/Impostor/blob/master/docs/Running-the-server.md
 
 ### The Game
 🕹️ https://store.steampowered.com/app/945360/Among_Us/
