@@ -300,6 +300,9 @@ namespace WindowsGSM.Plugins
             public ImposterServer Server;
             public HttpServer HttpServer;
             public AntiCheat AntiCheat;
+            public Timeout Timeout;
+            public Compatibility Compatibility;
+            public Debug Debug;
         }
     }
 }
