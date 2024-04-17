@@ -294,8 +294,8 @@ namespace WindowsGSM.Plugins
         }
         public class Compatibility
         {
-            public bool AllowFutureGameVersions = false;
-            public bool AllowVersionMixing = false;
+            public bool AllowFutureGameVersions = true;
+            public bool AllowVersionMixing = true;
         }
         public class Debug
         {
